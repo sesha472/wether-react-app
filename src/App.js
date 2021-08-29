@@ -1,19 +1,21 @@
 import './App.css';
-import React,{useState} from 'react'
-import Wether from './components/Wether';
+import React from 'react'
+// import Googlemaps from './components/Googlemaps';
+// import Wether from './components/Wether';
+// import Emoji  from './components/Emoji.js';
+import Temparature from './components/settemparatureapp/Temparature';
+
 
 function App() {
-  const [data, setdata] = useState("");
-   const outputtemparature=(tempdata)=>{
-    setdata(tempdata);
-   }
-
+ 
 
   return (
 
     <div className="App">
-       <Wether tepmhandler={outputtemparature} />
-       <h1>temparature is {data} </h1>
+      <Temparature/>
+      {/* <Emoji/> */}
+       {/* <Wether  /> */}
+       {/* <Googlemaps/> */}
     </div>
   );
 }

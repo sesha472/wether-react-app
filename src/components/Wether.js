@@ -12,16 +12,16 @@ const Wether = (props) => {
             const kelvin=result.main.temp;
             const celsius=kelvin-273.15
             settemp( Math.round(celsius) +"C");
-             })
-          props.tepmhandler(temp);
+             }).catch(()=>alert("city not found"))
     }
 
     return (
         <div>
             <form onSubmit={submithandler}>
                 <input type="text" value={data} onChange={(e)=>setdata(e.target.value)} />
-            <button>submit</button>
+          <br/>  <button>get temparature</button>
             </form>
+            <h1>temparature { temp}</h1> 
             
         </div>
     )
